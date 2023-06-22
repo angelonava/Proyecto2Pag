@@ -20,7 +20,7 @@
 
 body{
   font-family: 'Lato', sans-serif;
-  background-color: #fbfbfb;
+  background-color: #111122;
   font-size: 18px;
   line-height: 1.2;
 }
@@ -38,7 +38,7 @@ header {
   position: fixed;
     top: 0;
     left: 0;
-    background: #f1edf1;
+    background: #446644;
     z-index: 100;
     box-shadow: 0 3px 10px -5px #5f5f5f;
   }
@@ -63,9 +63,9 @@ a.descargar-cv {
     justify-content: center;
     align-content: center;
     padding: 10px 20px;
-    background-color: #af599e;
-    color: #fff;
-    text-decoration: #282627;
+    background-color: #aacc33;
+    color: #1f3d28;
+    text-decoration: #dddddd;
     border: 1px solid #af599e;
     border-radius: 15px;
     text-align: center;
@@ -74,6 +74,11 @@ a.descargar-cv {
 
 h1{
   font-size: 36px;
+  color: #dddddd;
+}
+
+p{
+padding: 10px;
 }
 
 h2{
@@ -81,14 +86,14 @@ h2{
     font-size: 28px;
 }
 
-h2, .cambiarfondo{
-  color: #0f0f0f;
+h2, .cambiarfondo, p{
+  color: #dddddd;
   
 }
 .hablar{
   border-radius: 50px;
-  background-color: rgba(175, 89, 158, 0.3);
-  color: #0f0f0f;
+  background-color: #447733;
+  color: #dddddd;
   padding: 20px;
   margin: 20px;
 }
@@ -116,7 +121,7 @@ li {
 /* Para que los enlaces hereden el color de texto y no tengan subrayado */
 a {
     text-decoration: none;
-    color: inherit;
+    color: #dddddd;
 }
 
 img{
@@ -146,7 +151,7 @@ li.item{
 }
 
 footer{
-  background-color: #af599e;
+  background-color: #446644;
   color: #fbfbfb;
   height: 90px;
   display: flex;
