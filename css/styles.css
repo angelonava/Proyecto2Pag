@@ -4,18 +4,17 @@
 /* Importar aquí la font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Teko&display=swap');
 
-
 /* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
 *  cuyos valores asigna por defecto el navegador.
 */
 
 /* Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* Para que el scrolleo en la one page sea suave */
-    scroll-behavior: smooth; 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Para que el scrolleo en la one page sea suave */
+  scroll-behavior: smooth; 
 }
 
 body{
@@ -25,6 +24,30 @@ body{
   line-height: 1.2;
 }
 
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+  text-decoration: none;
+  color: #dddddd;
+}
+
+.menu li a.active {
+  color: #fbfbfb;
+  background-color: #1f3d28;
+  padding: 15px;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
 
 /* alinear encabezado */
 
@@ -36,118 +59,119 @@ header {
   padding: 16px;
   width: 100%;
   position: fixed;
-    top: 0;
-    left: 0;
-    background: #446644;
-    z-index: 100;
-    box-shadow: 0 3px 10px -5px #5f5f5f;
-  }
+  top: 0;
+  left: 0;
+  background: #446644;
+  z-index: 100;
+  box-shadow: 0 3px 10px -5px #5f5f5f;
+}
   
-  .logo{
-    width: 90px;
-    margin-left: 16px;
-  }
+.logo{
+  width: 60px;
+  margin-left: 16px;
+}
 
-  /* centrar la imagen y hacerla redonda */
-
+/* centrar la imagen y hacerla redonda */
 .imagen-centrada{
   width:300px;
   height:300px;
   border-radius:150px;
 }
 
-
 /* Centrar boton */
 a.descargar-cv {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 10px 20px;
-    background-color: #aacc33;
-    color: #1f3d28;
-    text-decoration: #dddddd;
-    border: 1px solid #af599e;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 20px;
+  background-color: #aacc33;
+  color: #1f3d28;
+  text-decoration: #dddddd;
+  /* border: 1px solid #af599e; */
+  border-radius: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  width: 250px;
+  margin: 0 auto;
 }
 
 h1{
   font-size: 36px;
   color: #dddddd;
+  text-align: center;
 }
 
 p{
-padding: 10px;
+  padding: 20px;
+  text-align: justify;
+  max-width: 700px;
 }
 
 h2{
-    text-align: center;
-    font-size: 28px;
+  text-align: center;
+  font-size: 28px;
 }
 
 h2, .cambiarfondo, p{
   color: #dddddd;
   
 }
+
+#contacto{
+  min-height: 100vh;
+  margin: 50px 0;
+  padding: 0 20px;
+}
+
 .hablar{
   border-radius: 50px;
   background-color: #447733;
   color: #dddddd;
   padding: 20px;
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 700px;
 }
-
 
 /* Para quitar los puntos a los items de listas */
-ul {
-    list-style: none;
-}
-
 ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 20px;
-}
-
-li {
-  margin: 0 10px;
-}
-
-
-
-/* Para que los enlaces hereden el color de texto y no tengan subrayado */
-a {
-    text-decoration: none;
-    color: #dddddd;
-}
-
-img{
-  max-width: 100%;
-}
-
-/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
-*  el margin: auto; para tenerlo centrado fácilmente ;)
-*/
-main {
-    max-width: 1200px;
-    margin: auto;
+  list-style: none;
 }
 
 #inicio{
   padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 ul.menu{
-display: flex;
-font-size: 20px;
+  display: flex;
+  font-size: 20px;
 }
 
 li.item{
   padding: 16px;
   display: inline-block;
+}
+
+.menu-iconos {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto;
+  padding-top: 100px;
+}
+
+.icono{
+  width: 80px;
 }
 
 footer{
@@ -159,6 +183,21 @@ footer{
   align-items: center;
 }
 
+@media (min-width: 1024px) {
+
+  #inicio{
+    flex-direction: row;
+  }
+
+  .menu-iconos {
+    width: 350px;
+  }
+
+  .icono{
+    width: 100px;
+  }
+  
+}
 /* Recomendaciones! 
 *  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
 *    "estilos generales". Una buena idea sería comenzar por el <body> ;)
